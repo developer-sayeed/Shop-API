@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const { GetProduct, creatProduct } = require("../../controller/productController");
+const { GetProduct, creatProduct, singleProduct, removeproduct, editProduct } = require("../../controller/productController");
 
 
 
@@ -10,11 +10,9 @@ const router = express.Router();
 
 
 // Routes
-router.get("/" ,GetProduct)
 
-router.post("/", creatProduct)
-
-
+router.route("/").get(GetProduct).post(creatProduct)
+router.route("/:id").get(singleProduct).delete(removeproduct).put(editProduct).patch(editProduct)
 
 
 // Export Router

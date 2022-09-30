@@ -1,13 +1,1 @@
-[
-  {
-    "id": 42673,
-    "name": "iPhone Xs Max",
-    "reg_price": 1500,
-    "sale_price": 1200,
-    "Stock": 100,
-    "category": "Smart Phone",
-    "Brand": "Apple",
-    "photo": "",
-    "status": true
-  }
-]
+[{"id":42673,"name":"iPhone Xs Max","reg_price":1500,"sale_price":1200,"Stock":100,"category":"Smart Phone","Brand":"Apple","photo":"","status":true}]

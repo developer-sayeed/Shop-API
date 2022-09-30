@@ -86,13 +86,15 @@ const getCategory = (req, res) => {
 };
 
 /**
- * @name Get Single  Category
- * @Dis GET /api/v1/Category:id
+ * @name Remove Category
+ * @Dis DELETE /api/v1/Category:id
  * @aaccess Public
  */
 
 const removeCategory = (req, res) => {
+
   // Get single Category data From Json DB
+  
   const Category = JSON.parse(
     readFileSync(path.join(__dirname, "../database/category.json"))
   );
@@ -132,20 +134,21 @@ const editCategory = (req, res) => {
   // Valadition
 
   if (Category.some((data) => data.id == req.params.id)) {
-
-    
     Category[Category.findIndex((data) => data.id == req.params.id)] == {
       ...Category[Category.findIndex((data) => data.id == req.params.id)],
-      ...req.body
+      ...req.body,
     };
-    writeFileSync(path.join(__dirname, "../database/category.json"),JSON.stringify(Category))
+    writeFileSync(
+      path.join(__dirname, "../database/category.json"),
+      JSON.stringify(Category)
+    );
     res.status(200).json({
-      message : "Category Update Success"
-    })
+      message: "Category Update Success",
+    });
   } else {
     res.status(404).json({
-      message : "Category Update Faild"
-    })
+      message: "Category Update Faild",
+    });
   }
 };
 

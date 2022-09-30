@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
-const { Gettag, creattag } = require("../../controller/tagController");
-
+const { Gettag, creattag, singletag, removetag, edittag } = require("../../controller/tagController");
 
 
 
@@ -11,11 +10,9 @@ const router = express.Router();
 
 
 // Routes
-router.get("/" ,Gettag)
 
-router.post("/", creattag)
-
-
+router.route("/").get(Gettag).post(creattag)
+router.route("/:id").get(singletag).delete(removetag).put(edittag).patch(edittag)
 
 
 // Export Router

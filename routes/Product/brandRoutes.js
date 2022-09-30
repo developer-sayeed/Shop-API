@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const { GetBrand, creatBrand } = require("../../controller/brandController");
+const { Getbrand, creatbrand, singlebrand, removebrand, editbrand } = require("../../controller/brandController");
 
 
 
@@ -10,11 +10,9 @@ const router = express.Router();
 
 
 // Routes
-router.get("/" ,GetBrand)
 
-router.post("/", creatBrand)
-
-
+router.route("/").get(Getbrand).post(creatbrand)
+router.route("/:id").get(singlebrand).delete(removebrand).put(editbrand).patch(editbrand)
 
 
 // Export Router
