@@ -1,0 +1,77 @@
+<div class="create_devs_data my-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+
+                <a href="/" class="btn btn-success">Back </a>
+                <br><br>
+                <div class="card">
+                    <div class="card-body">
+                        <h1>Update <%= devs.name %> data</h1>
+                        <hr>
+                        <form action="/update/<%= devs.id %>" method="POST" enctype="multipart/form-data">
+
+                            <div class="form-group my-2">
+                                <label for="name">Name</label>
+                                <input value="<%= devs.name %> " id="name" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group my-2">
+                                <label for="name">Cell</label>
+                                <input value="<%= devs.cell %> " id="name" class="form-control" type="text" name="cell">
+                            </div>
+                            <div class="form-group my-2">
+                                <label for="email">Email</label>
+                                <input value="<%= devs.email %> " id="email" class="form-control" type="text" name="email">
+                            </div>
+                            <div class="form-group my-2">
+                                <label for="">Gender :-</label> <input type="radio" name="gender" value="<%= devs.gender %> " id="male"> <label for="male">Male</label> <input type="radio" name="gender" value="<%= devs.gender %> " id="female"> <label for="female">Female</label>
+                                <hr>
+                            </div>
+                            <div class="form-group my-2">
+                                <label for="email">Location</label>
+
+                                
+                                <select class="form-select" name="location" id="location">
+                                    <option <% if (devs.location == "Comilla") { %>selected<% } %> value="Comilla">Comilla</option>
+                                    <option <% if (devs.location == "Dhaka") { %>selected<% } %> value="Dhaka">Dhaka</option>
+                                    <option <% if (devs.location == "Sylet") { %>selected<% } %> value="Sylet">Sylet</option>
+                                    <option <% if (devs.location == "Barisal") { %>selected<% } %> value="Barisal">Barisal</option>
+                                    <option <% if (devs.location == "Chittgong") { %>selected<% } %> value="Chittgong">Chittgong</option>
+                                    <option <% if (devs.location == "Rangpur") { %>selected<% } %> value="Rangpur">Rangpur</option>
+                                </select>
+                            </div>
+                            <div class="form-group my-3">
+                                <label for="email">Skill</label>
+
+                                <select class="form-select" name="skill" id="skill">
+                                    
+                                    <option <% if (devs.skill == "MERN Stack") { %>selected<% } %>  value="MERN Stack">MERN Stack</option>
+                                    <option <% if (devs.skill == "Wordpress") { %>selected<% } %> value="Wordpress">Wordpress</option>
+                                    <option <% if (devs.skill == "PHP") { %>selected<% } %> value="PHP">PHP</option>
+                                    <option <% if (devs.skill == "Node JS") { %>selected<% } %> value="Node JS">Node JS</option>
+                                    <option <% if (devs.skill == "Reacts Js") { %>selected<% } %> value="Reacts Js">Reacts Js</option>
+                                    <option <% if (devs.skill == "React Native") { %>selected<% } %> value="React Native">React Native</option>
+                                    <option <% if (devs.skill == "Leraval") { %>selected<% } %> value="Leraval">Leraval</option>
+                                </select>
+                            </div>
+
+                            <div class="form-file form-file-sm my-3">
+                                <label for="photo">Photo</label>
+                                <br>
+                                <img src="/images/devs/<%= devs.photo %> " alt="" id="uploade_preview">
+                                
+                                <br>
+                                <label for="photoUpload"><img src="https://picturemehoustonphotobooth.com/wp-content/uploads/2017/05/Fotolia_108249960_Subscription_Monthly_M.jpg" alt=""></label>
+                                <input name="devs_photo" type="file"id="photoUpload">
+                                </label>
+                            </div>
+                            <input type="submit" class=" btn btn-info w-100" value="Update ">
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

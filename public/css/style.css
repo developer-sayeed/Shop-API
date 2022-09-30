@@ -1,0 +1,135 @@
+.create_devs_data form label img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .create_devs_data form input[type="file"] {
+    display: none;
+  }
+  .create_devs_data #uploade_preview {
+    width: 100%;
+  }
+
+
+  /* view_developer page */
+  .view_developer .card  img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+
+  }
+
+  /*  Single view Section */
+
+  
+img{
+  max-width: 100%;
+}
+
+.singleTeam {
+	background-color: #1c2630;
+	width: 1000px;
+	margin: auto;
+}
+
+.SingleTeamSection{
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin: 80px 0;
+  padding: 50px;
+}
+
+.SingleTeamSection .teamRight{
+  width: 40%;
+  text-align: center;
+  border-right: 2px solid #0d6efc;
+  padding-right: 20px;
+}
+.SingleTeamSection .teamRight img{
+  border-radius: 60%;
+width: 250px;
+}
+.SingleTeamSection .teamRight .team_info{
+  text-align: center;
+  
+}
+.SingleTeamSection .teamRight .team_info h1{
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 50px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+
+}
+.SingleTeamSection .teamRight .team_info h4{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 50px;
+  color: #333;
+
+}
+.SingleTeamSection .teamRight .social{
+
+}
+.SingleTeamSection .teamRight .social ul{
+  margin: 0;
+  padding: 0;
+}
+.SingleTeamSection .teamRight .social ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+}
+.SingleTeamSection .teamRight .social ul li a{
+  display: inline-block;
+padding: 0 5px;
+}
+.SingleTeamSection .teamRight .social ul li a i{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #0d6efc;
+  color: #0d6efc;
+  transition: .5s;
+}
+.SingleTeamSection .teamRight .social ul li a i:hover{
+  color: #fff;
+  background-color: #0d6efc;
+  transform: translateY(-10px);
+
+
+}
+
+.SingleTeamSection .teamleft{
+  width: 50%;
+}
+.SingleTeamSection .teamleft span{
+  width: 30px;
+  display: inline-block;
+
+
+}
+.SingleTeamSection .teamleft h1{
+  font-weight: 700;
+  font-size: 35px;
+}
+.SingleTeamSection .teamleft .button{
+  display: flex;
+  justify-content: flex-end;   
+  padding-top: 50px;
+}
+
+
+
+
+/*   */
+
